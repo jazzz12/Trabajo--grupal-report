@@ -1,0 +1,22 @@
+---
+title: "Reporte oficial :)"
+author: "Jazmin Esteban"
+date: '2022-07-06'
+output: rmdformats::readthedown
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include=FALSE}
+#install.packages("jtools")
+library(jtools)
+#install.packages("ggstance")
+library(ggstance)
+#install.packages("broom.mixed")
+library(broom.mixed)
+library(rmdformats)
+
+
+```

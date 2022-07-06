@@ -1,0 +1,30 @@
+---
+title: "data variable control"
+author: "Jazmin Esteban"
+date: '2022-04-29'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(rio)
+library(rvest)
+library(htmltab)
+link= "https://es.wikipedia.org/wiki/Anexo:Distritos_del_Per%C3%BA"
+path= "/html/body/div[3]/div[3]/div[5]/div[1]/table[2]"
+dataa= htmltab(link,path)
+head(dataa)
+```
+```{r}
+library(readr)
+guess_encoding(dataa)
+```
+```{r}
+dataa = import("dataa.csv", encoding = "UTF-8")
+head(dataa)
+export(dataa, "dataa.csv")
+```
+
